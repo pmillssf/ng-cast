@@ -11,9 +11,24 @@
 </head>
 <body>
   <app ng-app="video-player">
-    <h5><br/><br/>this message will disappear when <em>app</em> component is correctly rendered<br/><br/><br/></h5>
+    <div id="app container">
+      <nav class="navbar">
+        <div class="col-md-6 col-md-offset-3">
+          <search><h5><em>search</em> component goes here</h5></search>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-md-7">
+          <video-player><h5><em>videoPlayer</em> component goes here</h5></video-player>
+        </div>
+        <div class="col-md-5" ng-controller='videoController'>
+          <video-list></video-list>
+        </div>
+      <div>
+    </div>
   </app>
   <script src="src/index.js"></script>
+  <script src="src/data/exampleVideoData.js"></script>
   <script src="src/services/youTube.js"></script>
   <script src="src/components/app.js"></script>
   <script src="src/components/videoPlayer.js"></script>
