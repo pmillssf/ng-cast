@@ -7,7 +7,7 @@ angular.module('video-player')
     template: 
     '<li class="video-list-entry media">\
       <div class="media-left">\
-        <img class="media-object" src="{{video.snippet.thumbnails.default.url}}" />\
+        <img class="media-object" ng-src="{{video.snippet.thumbnails.default.url}}" />\
       </div>\
       <div class="media-body">\
         <div class="video-list-entry-title">{{video.snippet.title}}</div>\

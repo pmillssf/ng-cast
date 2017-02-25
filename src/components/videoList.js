@@ -1,18 +1,19 @@
 angular.module('video-player')
-.controller('videoController', ['$scope', '$window', function($scope, $window) {
-  // console.log($scope);
-  $scope.exampleVideoData = $window.exampleVideoData;
-  console.log($window.exampleVideoData);
-}])
-.directive('videoList', function($window) {
+.controller('videoController', function() {
+  // $scope.exampleVideoData = $window.exampleVideoData;
+  // console.log(this);
+})
+.directive('videoList', function() {
   return {
     scope: {
-      exampleVideoData: '<'
+      videos: '<'
     },
     controller: 'videoController',
+    controllerAs: 'ctrl',
+    bindToController: true,
     // TODO
     template: '<ul> \
-                <video-list-entry class="videoListEntry" ng-repeat="video in exampleVideoData" \
+                <video-list-entry class="videoListEntry" ng-repeat="video in ctrl.videos" \
                 video="video"\
                 "> \
                 </video-list-entry\> \
